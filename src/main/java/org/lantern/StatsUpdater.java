@@ -65,6 +65,7 @@ public class StatsUpdater extends Thread {
     @SuppressWarnings("unchecked")
     private void updateStats() {
         log.debug("Updating stats...");
+        log.debug("Stats URL: " + LanternClientConstants.STATS_URL);
         
         final HttpClient client = this.httpClientFactory.newClient();
         final HttpGet get = new HttpGet();

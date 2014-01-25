@@ -28,7 +28,7 @@ javaArgs="-XX:+HeapDumpOnOutOfMemoryError -Djna.nosys=true -jar $jar $*"
 
 if [ "$RUN_LANTERN_DEBUG_PORT" ]
 then
-  javaArgs="-Xdebug -Xrunjdwp:transport=dt_socket,address=$RUN_LANTERN_DEBUG_PORT,server=y,suspend=y $javaArgs"
+  javaArgs="-Xdebug -Xrunjdwp:transport=dt_socket,address=$RUN_LANTERN_DEBUG_PORT,server=y,suspend=n $javaArgs"
 fi
 
 if [ $(uname) == "Linux" ]

@@ -103,7 +103,7 @@ public class HttpClientFactoryTest {
     }
 
     private void testStats(final HttpClient client) throws Exception {
-        final String uri = "https://lanternctrl.appspot.com/stats";
+        final String uri = "https://plm-alpha.appspot.com/stats";
 
         final HttpGet get = new HttpGet(uri);
         final HttpResponse response = client.execute(get);

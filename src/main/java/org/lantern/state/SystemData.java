@@ -11,7 +11,7 @@ import org.codehaus.jackson.map.annotate.JsonView;
 import org.lantern.annotation.Keep;
 import org.lantern.state.Model.Run;
 
-import com.sun.management.OperatingSystemMXBean;
+//import com.sun.management.OperatingSystemMXBean;
 
 /**
  * Class containing data about the users system.
@@ -38,9 +38,11 @@ public class SystemData {
         } catch (final IOException e) {
             bytesFree = 1000000000L;
         }
-        final OperatingSystemMXBean operatingSystemMXBean = 
-            (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
-        memory = operatingSystemMXBean.getTotalPhysicalMemorySize();
+        
+        //final OperatingSystemMXBean operatingSystemMXBean = 
+        //    (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
+        //memory = operatingSystemMXBean.getTotalPhysicalMemorySize();
+        memory=0;
     }
     
     @JsonView({Run.class})

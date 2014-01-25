@@ -591,7 +591,7 @@ public class Launcher {
                         Events.syncModal(model, Modal.authorize);
                     } catch (final NotInClosedBetaException e) {
                         LOG.warn("Not in closed beta!!", e);
-                        internalState.setNotInvited(true);
+                        internalState.setNotInvited(false);
                     }
                 }
             };

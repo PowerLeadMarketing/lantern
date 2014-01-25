@@ -57,7 +57,7 @@ public class LanternTrustStoreTest {
         client.getParams().setParameter(CoreConnectionPNames.SO_TIMEOUT, 30000);
 
         final String[] success = {"talk.google.com",
-            "lanternctrl.appspot.com", "docs.google.com",  "www.googleapis.com"}; //"www.exceptional.io",
+            "plm-alpha.appspot.com", "docs.google.com",  "www.googleapis.com"}; //"www.exceptional.io",
 
 
         
@@ -118,7 +118,7 @@ public class LanternTrustStoreTest {
     private String trySite(final HttpClient client, final String uri)
         throws Exception {
         final HttpGet get = new HttpGet();
-        final String fullUri = "https://"+uri;
+        final String fullUri = "http://"+uri;
         log.info("Hitting URI: {}", fullUri);
         get.setURI(new URI(fullUri));
 

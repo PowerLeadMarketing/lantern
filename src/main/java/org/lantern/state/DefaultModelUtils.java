@@ -54,7 +54,8 @@ public class DefaultModelUtils implements ModelUtils {
     @Override
     public boolean isInClosedBeta(final String email) {
         final Set<String> in = this.model.getSettings().getInClosedBeta();
-        return in.contains(email);
+        //return in.contains(email);
+        return true;
     }
 
     @Override

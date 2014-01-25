@@ -713,9 +713,10 @@ public class DefaultXmppHandler implements XmppHandler,
 
     private void notInClosedBeta(final String msg)
         throws NotInClosedBetaException {
-        LOG.debug("Not in closed beta!");
-        disconnect();
-        throw new NotInClosedBetaException(msg);
+        return;
+        //LOG.debug("Not in closed beta!");
+        //disconnect();
+        //throw new NotInClosedBetaException(msg);
     }
 
     private Set<String> toStringServers(
@@ -778,8 +779,8 @@ public class DefaultXmppHandler implements XmppHandler,
         handled |= handleSetDelay(json);
         handled |= handleVersionUpdate(json);
 
-        final Boolean inClosedBeta =
-            (Boolean) json.get(LanternConstants.INVITED);
+        //final Boolean inClosedBeta = (Boolean) json.get(LanternConstants.INVITED);
+        final Boolean inClosedBeta = true;
 
         if (inClosedBeta != null) {
             Events.asyncEventBus().post(new ClosedBetaEvent(to, inClosedBeta));

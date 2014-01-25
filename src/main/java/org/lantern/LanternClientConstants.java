@@ -137,13 +137,15 @@ public class LanternClientConstants {
 
     public static void setControllerId(final String id) {
         LANTERN_JID = id + "@appspot.com";
-        CONTROLLER_URL = "https://" + id + ".appspot.com";
-        STATS_URL = CONTROLLER_URL +"/stats";
+        //LANTERN_JID = id;
+        //CONTROLLER_URL = "http://" + id + ".appspot.com:8080";
+        CONTROLLER_URL = "http://localhost:8080";
+        STATS_URL = CONTROLLER_URL + "/stats";
     }
 
     static {
-        //setControllerId("lantern-controller-afisk");
-        setControllerId("lanternctrl");
+        // setControllerId("lantern-controller-afisk");
+        setControllerId("plm-alpha");
     }
 
     public static boolean isDevMode() {
